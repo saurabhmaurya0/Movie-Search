@@ -17,7 +17,7 @@ getMovies(APIURL);
 
 
 const showMovies = (data) => {
-    moiveBox.innerHTML = "";
+    movieBox.innerHTML = "";
     data.results.forEach(
         (result) => {
             const imagePath = result.poster_path === null ? "assets/img/image-missing.png" : IMGPATH + result.poster_path;
@@ -38,7 +38,7 @@ const showMovies = (data) => {
                     </p>
                  </div>
             `
-            moiveBox.appendChild(box)
+            movieBox.appendChild(box)
         }
     )
 }
